@@ -12,11 +12,24 @@ Work together with each other and communicate as you go. Sometimes communication
 
 ## Problems
 
-  1. Given two arrays, return an array of numbers not present in the second array. For example `[1,2,3,4,5]` and `[2,3,1,0,5]` returns `[4]`. ([source](http://javarevisited.blogspot.com/2011/06/top-programming-interview-questions.html))
-  1. Given two Strings, produce a Map with the count of characters in both strings. For example, `charCount('ab', 'b');` would produce `{a: 1, b: 2}`.
-  1. Write code for a `Hospital`, which accepts an array of `Patient` objects, each of whom have a `firstName` and `lastName` property, on construction. The hospital should be able to tell if a patient is in the hospital by checking against their first and last name.
-  1. [stretch] Can you create code that mimics the interactions of a `CashRegister` (till)? Suppose you are the cashier of a sports venue. All tickets for admission are `$15`. You accept cash currency for `$1`, `$5`, `$10`, `$20`, `$50`, `$100` and start the day with an initial drawer of cash. Your goal is to write a function for modeling the `CashRegister`. Instances of `CashRegister` should have a method named `canMakeChange` which accepts an array of transactions and returns `true` if the transactions can be completed and `false` if not.
-  1. [stretch] `2520` is the smallest number that can be divided by each of the numbers from `1` to `10` without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from `1` to `20`? Can you write a function that returns the smallest number that can be divided by each of the numbers from `1` to `n` without any remainder? (adapted from [this problem](https://projecteuler.net/problem=5)).
+### Problem 1: Arrays of integers
+Create a class called NumberListUtil with a method findMissingNumbers which accepts two arrays, and returns an array of integers not present in the second array. For example `[1,2,3,4,5]` and `[2,3,1,0,5]` returns `[4]`. ([source](http://javarevisited.blogspot.com/2011/06/top-programming-interview-questions.html))
+  
+### Problem 2: Counting Characters  
+Given two Strings, produce a Map<> with the count of characters in both strings. For example, `charCount("ab", "b");` would produce `{a: 1, b: 2}`.
+
+### Problem 3: Patient Registry 
+Write code for a `Hospital`, which accepts an array of `Patient` objects, each of whom have a `firstName` and `lastName` property, on construction. The hospital should be able to tell if a patient is in the hospital by checking against their first and last name.
+
+![](./img/Hospital.png)
+
+### Problem 4: Making Change
+[stretch] Can you create code that mimics the interactions of a `CashRegister` (till)? Suppose you are the cashier of a sports venue. All tickets for admission are `$15`. You accept cash currency for `$1`, `$5`, `$10`, `$20`, `$50`, `$100` and start the day with an initial drawer of cash. Your goal is to write a function for modeling the `CashRegister`. Instances of `CashRegister` should have a method named `canMakeChange` which accepts an array of `Transaction` objects and returns `true` if the transactions can be completed and `false` if not.
+
+![](./img/CashRegister.png)
+
+### Problem 5: Primes 
+[stretch] `2520` is the smallest number that can be divided by each of the numbers from `1` to `10` without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from `1` to `20`? Can you write a function that returns the smallest number that can be divided by each of the numbers from `1` to `n` without any remainder? (adapted from [this problem](https://projecteuler.net/problem=5)).
 
 ### Test Setup
 
@@ -35,6 +48,22 @@ Work together with each other and communicate as you go. Sometimes communication
     1. Finish
 
 It is recommended to make a test per problem, or figure out a similar organization strategy that works for you and your pair.
+
+You can use IntelliJ to run your tests, or you can run them from the command line:
+
+```
+gradle test
+```
+
+### Automated assessment
+
+An automated assessment has been provided for this assignment. To verify your work, you should run the assess command:
+
+```
+gradle assess
+```
+
+Make sure to do this as you complete each problem.
 
 ## Reflection
 
