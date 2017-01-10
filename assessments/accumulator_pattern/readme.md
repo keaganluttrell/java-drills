@@ -113,11 +113,11 @@ Begin by forking the repository from which you'll be working. The 'Fork' button 
 
 To set up your repository in git using HTTPS:
 
-	git clone https://github.com/gSchool/java-drills.git
+	git clone https://github.com/<your name>/java-drills.git
 
 Or by using SSH:
 
-	git clone git@github.com:gSchool/java-drills.git
+	git clone git@github.com:<your name>/java-drills.git
 
 Once you have cloned the repository, run the following command to verify the repository was successfully cloned:
 
@@ -125,9 +125,16 @@ Once you have cloned the repository, run the following command to verify the rep
 
 In the output verify that the following line exists:
 
-	remote.origin.url=git@github.com:gSchool/java-drills.git
+	remote.origin.url=git@github.com:<your name>/java-drills.git
 
+Finally, create a branch in which you will do your work:
 
+    git checkout -b solution
 
+After you have completed the assessment, be sure to push your changes:
+
+    git add .
+    git commit -m "Completed Assessment"
+    git push origin solution
 
 
