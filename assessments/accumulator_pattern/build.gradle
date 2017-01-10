@@ -36,6 +36,7 @@ sourceSets {
 }
 
 task assess(type: Test) {
+    include 'ProfileTestSuite.class'
     testClassesDir = sourceSets.assessment.output.classesDir
     classpath = sourceSets.assessment.runtimeClasspath
 }
