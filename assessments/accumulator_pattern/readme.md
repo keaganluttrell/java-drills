@@ -16,7 +16,7 @@ Work together with each other and communicate as you go. Sometimes communication
 Create a class called `NumberListUtil` with a `findMissingNumbers()` method that accepts two `List<>`s of `Integers`, and returns a `List<Integer>` containing numbers not present in the second `List<>`. For example `[1,2,3,4,5]` and `[2,3,1,0,5]` returns `[4]`. ([source](http://javarevisited.blogspot.com/2011/06/top-programming-interview-questions.html))
   
 ### Problem 2: Counting Characters  
-Given two Strings, produce a Map<> with the count of characters in both strings. For example, `charCount("ab", "b");` would produce `{a: 1, b: 2}`.
+Create a class and add a static method which, when given two Strings, produces a `Map<>` with the count of characters in both strings. Call the class and method whatever you like. For example, the `charCount("ab", "b");` method would produce `{a: 1, b: 2}`.
 
 ### Problem 3: Patient Registry 
 Write code for a `Hospital`, which accepts a `List<Patient>`, each of whom have a `firstName` and `lastName` property, on construction. The hospital should be able to tell if a patient is in the hospital by checking against their first and last name.
