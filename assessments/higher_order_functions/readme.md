@@ -12,6 +12,12 @@ Work together with each other and communicate as you go. Sometimes communication
 
 ## Problems
 
+### Counter Problem
+
+1. Create a `Counter` class with a `createCounter()` method that returns an `IntSupplier`. Each call to `createCounter()` should return a new counter, and incrementing one should have no effect on others.  
+
+### List Problems
+
 1. Implement a function `map` which has the same functionality as [`java.util.stream.map`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#map-java.util.function.Function-) but does not use `java.util.stream.map()`. Implement your function so that the first argument is the `List<>` and the second argument is the callback.
 1. Write a function, `all`, which takes a `List<>` and callback function as parameters. The callback function should return a `Boolean` value. If _every_ element of the array returns `true` when the callback is supplied the element as an argument, then `all` returns `true`, otherwise it returns `false`. For example `all(Arrays.asList(2,4,6), (num) -> num % 2 == 0 )` would return `true`.
 1. Write a function, `any`, which takes an array and callback function as parameters. The callback function should return a `Boolean` value. If _any_ element of the array returns `true` when the callback is supplied the element as an argument, then `any` returns `true`, otherwise it returns `false`. For example `any(Arrays.asList(1,4,7), (num) -> num % 2 == 0 )` would return `true`.
