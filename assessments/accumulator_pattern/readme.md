@@ -24,7 +24,22 @@ Write code for a `Hospital`, which accepts a `List<Patient>`, each of whom have 
 ![](./img/Hospital.png)
 
 ### Problem 4: Making Change
-[stretch] Can you create code that mimics the interactions of a `CashRegister` (till)? Suppose you are the cashier of a sports venue. All tickets for admission are `$15`. You accept cash currency for `$1`, `$5`, `$10`, `$20`, `$50`, `$100` and start the day with an initial drawer of cash. Your goal is to write a function for modeling the `CashRegister`. Instances of `CashRegister` should have a method named `canMakeChange()` which accepts a `List<>` of `Transaction` objects and returns `true` if the transactions can be completed and `false` if not.
+[stretch] Can you create code that mimics the interactions of a `CashRegister` (till)? Suppose you are the cashier of a sports venue. All tickets for admission are `$15`. You accept cash currency for `$1`, `$5`, `$10`, `$20`, `$50`, `$100` and start the day with an initial drawer of cash, as follows:
+
+```
+private SortedMap<Integer, Integer> drawer = new TreeMap<Integer, Integer>() {
+    {
+        put(1, 20);
+        put(5, 5);
+        put(10, 5);
+        put(20, 5);
+        put(50, 5);
+        put(100, 2);
+    }
+};
+```
+ 
+Your goal is to write a function for modeling the `CashRegister`. Instances of `CashRegister` should have a method named `canMakeChange()` which accepts a `List<>` of `Transaction` objects and returns `true` if the transactions can be completed and `false` if not.
 
 ![](./img/CashRegister.png)
 
