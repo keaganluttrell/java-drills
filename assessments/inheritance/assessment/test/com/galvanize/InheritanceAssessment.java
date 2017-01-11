@@ -17,5 +17,6 @@ public class InheritanceAssessment {
 
         Assert.assertTrue(dieselSuper == petrolSuper);
         Assert.assertTrue(radiatorSuper == engineSuper);
+        Assert.assertNotNull(radiatorSuper);
     }
 }
