@@ -11,22 +11,13 @@ import java.lang.reflect.Method;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class ObjectControllerTest {
+public class WebFrameworkTest {
 
     @Test
     public void reflecTest() {
-        // Setup
-        String path = "";
-        for (Annotation annotation : ObjectController.class.getAnnotations()) {
-            if (annotation instanceof RequestMapping) {
-                RequestMapping mapping = (RequestMapping) annotation;
-                path += mapping.path()[0];
-            }
-        }
-        Set<String> descriptions = new TreeSet<>();
 
         // Exercise
-        // TODO: Get the asserts under Then to pass
+        Set<String> descriptions = WebFramework.getDescriptions(ObjectController.class);
 
         // Assert
         Assert.assertThat(descriptions, CoreMatchers.hasItem("listObjects() handles GET /categories"));
