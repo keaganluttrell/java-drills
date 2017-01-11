@@ -1,20 +1,21 @@
 package com.example;
 
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
 import java.util.Set;
 import java.util.TreeSet;
-
-import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ObjectControllerTest {
 
     @Test
-    public void reflectionTest() {
-        // Given
+    public void reflecTest() {
+        // Setup
         String path = "";
         for (Annotation annotation : ObjectController.class.getAnnotations()) {
             if (annotation instanceof RequestMapping) {
@@ -24,15 +25,14 @@ public class ObjectControllerTest {
         }
         Set<String> descriptions = new TreeSet<>();
 
-        // When
+        // Exercise
         // TODO: Get the asserts under Then to pass
 
-
-        // Then
-        assertThat(descriptions, hasItem("listObjects() handles GET /categories"));
-        assertThat(descriptions, hasItem("createCategory() handles POST /categories"));
-        assertThat(descriptions, hasItem("updateCategory() handles PUT /categories/{objectId}"));
-        assertThat(descriptions, hasItem("deleteCategory() handles DELETE /categories/{objectId}"));
-        assertThat(descriptions, hasItem("categories() handles GET /categories/{objectId}"));
+        // Assert
+        Assert.assertThat(descriptions, CoreMatchers.hasItem("listObjects() handles GET /categories"));
+        Assert.assertThat(descriptions, CoreMatchers.hasItem("createCategory() handles POST /categories"));
+        Assert.assertThat(descriptions, CoreMatchers.hasItem("updateCategory() handles PUT /categories/{objectId}"));
+        Assert.assertThat(descriptions, CoreMatchers.hasItem("deleteCategory() handles DELETE /categories/{objectId}"));
+        Assert.assertThat(descriptions, CoreMatchers.hasItem("categories() handles GET /categories/{objectId}"));
     }
 }
