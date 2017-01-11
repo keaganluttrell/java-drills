@@ -8,13 +8,14 @@ public class InheritanceAssessment {
     public void testInheritance() throws Exception {
         Class<?> dieselEngine = Class.forName("com.galvanize.DieselEngine");
         Class<?> petrolEngine = Class.forName("com.galvanize.PetrolEngine");
-        Class<?> engine = Class.forName("com.galvanize.Engine");
         Class<?> radiator = Class.forName("com.galvanize.Radiator");
-        Class<?> component = Class.forName("com.galvanize.Component");
 
-        Assert.assertTrue(dieselEngine.getSuperclass() == engine);
-        Assert.assertTrue(petrolEngine.getSuperclass() == engine);
-        Assert.assertTrue(engine.getSuperclass() == component);
-        Assert.assertTrue(radiator.getSuperclass() == component);
+        Class<?> dieselSuper = dieselEngine.getSuperclass();
+        Class<?> petrolSuper = petrolEngine.getSuperclass();
+        Class<?> radiatorSuper = radiator.getSuperclass();
+        Class<?> engineSuper = dieselSuper.getSuperclass();
+
+        Assert.assertTrue(dieselSuper == petrolSuper);
+        Assert.assertTrue(radiatorSuper == engineSuper);
     }
 }

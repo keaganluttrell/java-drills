@@ -7,7 +7,7 @@ In this exercise you will **begin by implementing a few concrete classes** and *
 Let's look at a few examples of [automotive parts](https://en.wikipedia.org/wiki/List_of_auto_parts#Engine_components_and_parts):
 
   1. A car engine has a `manufacturer`, `partNumber`, `description`, `displacement`, `compressionRatio`. Car engines may be either a `DieselEngine` or a `PetrolEngine`. The engine itself is just one of many Engine Components.
-  1. A radiator has a `manufacturer`, `partNumber`, `description`, and `coolantPressure`. Radiators are part of the Cooling System for a car.
+  1. A `Radiator` has a `manufacturer`, `partNumber`, `description`, and `coolantPressure`. `Radiator`s are part of the Cooling System for a car.
   1. Another component of the Cooling System for a car is the fan blade. A fan blade has a `manufacturer`, `partNumber`, `description`, `numberOfBlades`, and `diameterInCentimeters`.
   1. The camshaft is another Engine Component. It has a `manufacturer`, `partNumber`, `description`, `duration`, `lift`, and `timing`.
 
