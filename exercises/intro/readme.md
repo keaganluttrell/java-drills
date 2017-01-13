@@ -102,6 +102,7 @@ Now that we can build and run our tests, let's get to work on a problem!
 1. In app create a new instance of `Library`, and pass it the command line args
 1. Create a test that also instantiates `Library` but passes it the arguments `new String[] {"hello", "world"}`. Be sure to follow the SEAT pattern, as well as "expected" and "actual". Figure out what the counts should be yourself, don't just paste the output into "expected". 
 1. Add a method to `Library` called `getLetterCounts()` that *accepts no parameters*, and returns a `List<Integer>` containing the number of letters in each command line argument
+1. Alter your word counter to omit certain words: if the word is "secret", "hidden", or "shhh" don't include it in the count (be sure to write a test first!)
 1. Do a google search for "maven slf4j-simple" and add it as a dependency
 1. Add code to `main()` to log each count
 
