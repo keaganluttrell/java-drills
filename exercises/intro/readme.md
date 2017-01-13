@@ -104,7 +104,6 @@ Now that we can build and run our tests, let's get to work on a problem!
 1. Add a method to `Library` called `getLetterCounts()` that *accepts no parameters*, and returns a `List<Integer>` containing the number of letters in each command line argument
 1. Do a google search for "maven slf4j-simple" and add it as a dependency
 1. Add code to `main()` to log each count
-1. Add the [application plugin](https://docs.gradle.org/current/userguide/application_plugin.html) and run your app from the command line to verify it works!
 
 ## UI
 
@@ -129,7 +128,7 @@ gradle jar
 Then run it from the command line:
 
 ```
-java -jar build/libs/intro.jar hello there brent
+java -jar build/libs/intro.jar hello there
 ```
 
 and observe the output:
@@ -137,8 +136,14 @@ and observe the output:
 ```
 0 [main] INFO App - hello=5
 0 [main] INFO App - there=5
-0 [main] INFO App - brent=5
 ```
+
+### Stretch
+
+If you complete the exercise early, and you have passing tests, pick one of the following sites and complete as many challenges in Java as you can:
+
+  1. [Codewars](http://www.codewars.com/)
+  1. [Coderbyte](https://coderbyte.com/challenges)
 
 ## Assessment
 
