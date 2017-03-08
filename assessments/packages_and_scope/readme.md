@@ -2,13 +2,13 @@
 
 ## Background
 
-So far we have learned about packages, scope, and access modifiers, now it is time to see how they are used in real life. These really become necessary when you build an API that others will consume. When building APIs, it is important to make sure that the consumer can only call the exposed methods, and not mess with the internal implementation details or else the functionality of the API may be compromised. An important example of this is a connection pool, which we will build today. 
-  
+So far we have learned about packages, scope, and access modifiers, now it is time to see how they are used in real life. These really become necessary when you build an API that others will consume. When building APIs, it is important to make sure that the consumer can only call the exposed methods, and not mess with the internal implementation details or else the functionality of the API may be compromised. An important example of this is a connection pool, which we will build today.
+
 We will be learning about SQL shortly, but for now only the most basic understanding is necessary. Applications can talk to databases, and they do this using a database _connection_. Usually, setting up a connection is a very expensive operation, so database drivers will allocate a _pool_ of preallocated connections from which the driver will _lease_ connections to the application. What is very important is that no-matter-what, the application always returns the connection back to the pool, otherwise you have what is called a _leak_.
 
-Fortunately, Java provides us with the [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) statement and the [AutoClosable interface](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html).
+Fortunately, Java provides us with the [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) statement and the [AutoCloseable interface](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html). A newly leased connection (the "resource") is referenced at the start of the try block (see below), and it needs to implement `AutoCloseable` for the feature to work.
 
-Our goal for this assessment is to use these Java constructs to ensure the following code will always return the `Connection` to the `ConnectionPool`:
+Our goal for this assessment is to use these Java constructs to ensure the following code will always return the `Connection` to the `ConnectionPool`, even if an exception is thrown in the `try` block:
 
 ```java
 ConnectionPool pool = new ConnectionPool(5);
@@ -18,6 +18,11 @@ try(Connection connection = pool.getConnection()) {
 ```
 
 *** note: the `Connection` must be returned to the `ConnectionPool` even when the exception is thrown! ***
+
+So here is what needs to be done (using TDD):
+
+1. Create a `ConnectionPool` class that simulates the lending out of connections from a finite pool. Note that this can be a very simple class, as these "fake" connections are not actually functional.
+1. Create a `Connection` class that implements the `AutoCloseable` interface, which ensures that its `close()` method will always be called, even if an exception occurs within the try block shown above.
 
 In order to ensure the integrity of our pool, we must make sure that even the most malicious of consumers cannot spoil the integrity of our pool:
 
