@@ -57,5 +57,5 @@ After you have completed the assessment, be sure to push your changes:
 To see if you have completed the assessment correctly, run:
 
 ```
-gradle asses
+gradle assess
 ```
