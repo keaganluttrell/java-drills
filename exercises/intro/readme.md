@@ -33,15 +33,21 @@ Finally, create a branch in which you will do your work:
 
 ### Creating a gradle project
 
+Change to the intro exercise directory:
+
+```shell
+cd exercises/intro
+```
+
 Use `gradle init` to create a new gradle project:
 
-```
+```shell
 gradle init --type java-library
 ```
 
 Then verify it builds on the command line:
 
-```
+```shell
 gradle build
 ```
 
