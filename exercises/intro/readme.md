@@ -133,6 +133,20 @@ jar {
 }
 ```
 
+_Note:_ If you're using Gradle 4, add these lines to your build.gradle:
+
+```
+jar {
+    manifest {
+        attributes "Main-Class": "App"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+```
+
 Then build a jar:
 
 ```
