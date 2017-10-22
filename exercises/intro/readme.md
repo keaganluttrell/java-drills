@@ -148,4 +148,4 @@ After you have completed the assessment, be sure to push your changes:
 
     git add .
     git commit -m "Completed Assessment"
-    git push origin solution
+    git push origin solution_for_intro
