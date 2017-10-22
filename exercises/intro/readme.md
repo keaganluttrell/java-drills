@@ -110,7 +110,8 @@ Since we have not yet covered Integration Testing, the correct console output wi
 ### Steps
 
 1. Add a constructor to `Library` that accepts a List of words
-1. Modify the `testSomeLibraryMethod()` to pass the `Library` constructor a List of Strings: "hello" and "world". Be sure to follow the SEAT pattern and determine "expected" and "actual".
+1. Modify the `testSomeLibraryMethod()` to pass the `Library` constructor a List of Strings: "hello" and "world". 
+1. In your test, invoke a method on `Library` called `getLetterCounts()`. Be sure to follow the SEAT pattern and use `expected` and `actual` variables.
 1. Add a method to `Library` called `getLetterCounts()` that *accepts no parameters*, and returns a `List<Integer>` containing the number of letters in each command line argument. Use SEAT and figure out what the counts should be yourself, don't just paste the output into "expected".
 1. Do a Google search for `"maven slf4j-simple"` and add it as a dependency
 1. Add code to `LibraryTest` to log each word and its corresponding count
