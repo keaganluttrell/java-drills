@@ -98,16 +98,14 @@ Now that we can build and run our tests, let's get to work on a problem!
 
 ## Problem
 
-For this problem you will add a method to the `Library` class that will accept an array of words and output the count of letters in each word, using `LOGGER.info()`. You should modify `LibraryTest` to invoke the new method, and run your app from IntelliJ with the `debug` button.
-
-When you run it, you should observe the following output:
+For this problem you will make an application that outputs the count of letters of words to the console. You will run the application by debugging your tests, and observe the output:
 
 ```
 0 [main] INFO App - best=4
 0 [main] INFO App - friends=7
 ```
 
-Since we have not yet covered Integration Testing, a working application will be the sign of success and we will build it as a shell, implementing the behaviors with TDD and Unit Testing.
+Since we have not yet covered Integration Testing, the correct console output will be the ultimate sign of success.
 
 ### Steps
 
@@ -120,48 +118,7 @@ Since we have not yet covered Integration Testing, a working application will be
 1. Add code to `main()` to log each word and its corresponding count
 1. Alter your word counter treat certain words differently: if the word is "secret", "hidden", or "shhh" then the count should be `-1`. Be sure to write a test first!
 
-## UI
-
-Finally, to make the app runnable, add the following lines to your build.gradle:
-
-```
-jar {
-    manifest {
-        attributes "Main-Class": "App"
-    }
-    from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
-```
-
-_Note:_ If you're using Gradle 4, add these lines to your build.gradle:
-
-```
-jar {
-    manifest {
-        attributes "Main-Class": "App"
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
-
-```
-
-Then build a jar:
-
-```
-gradle jar
-```
-
-Then run it from the command line:
-
-```
-java -jar build/libs/intro.jar hello there
-```
-
-and observe the output:
+After you have completed these steps, hit debug and observe the output:
 
 ```
 0 [main] INFO App - hello=5
