@@ -18,7 +18,7 @@ Or, using SSH:
 
     git clone git@github.com:<your Github username>/java-drills.git
 
-Once you have cloned the repository, run the following command to verify the repository was successfully cloned:
+Once you have cloned the repository, `cd` into it and run the following command to verify the repository was successfully cloned:
 
     git config -l
 
@@ -28,7 +28,7 @@ In the output verify that the following line exists:
 
 Finally, create a branch in which you will do your work:
 
-    git checkout -b solution
+    git checkout -b solution_for_intro
 
 
 ### Creating a gradle project
@@ -98,13 +98,9 @@ Now that we can build and run our tests, let's get to work on a problem!
 
 ## Problem
 
-For this problem you will make an application that outputs the count of letters of words given as command line arguments to your application. By the end of this Problem, you will be able to run your application with:
+For this problem you will add a method to the `Library` class that will accept an array of words and output the count of letters in each word, using `LOGGER.info()`. You should modify `LibraryTest` to invoke the new method, and run your app from IntelliJ with the `debug` button.
 
-```
-java -jar build/libs/intro.jar best friends
-```
-
-and observe the output:
+When you run it, you should observe the following output:
 
 ```
 0 [main] INFO App - best=4
