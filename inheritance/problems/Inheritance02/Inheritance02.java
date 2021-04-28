@@ -10,6 +10,6 @@ public class Inheritance02 {
 
     Manager manager = new Manager();
     //System.out.println(employee.status);
-    System.out.println(employee.getStatus());
+    System.out.println(manager.getStatus());
   }
 }
