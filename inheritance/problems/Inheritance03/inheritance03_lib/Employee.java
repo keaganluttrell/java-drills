@@ -6,4 +6,8 @@ public class Employee {
   public String getStatus() {
     return "This employee is " + status;
   }
+
+  public String status() {
+    return this.status;
+  }
 }
