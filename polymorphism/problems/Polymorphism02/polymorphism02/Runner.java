@@ -1,7 +1,7 @@
 package polymorphism02;
 
 public class Runner {
-  public void run(Object o) {
-    o.imp();
+  public void run(Importer o) {
+    o.doImport();
   }
 }
